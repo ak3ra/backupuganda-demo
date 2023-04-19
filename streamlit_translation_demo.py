@@ -53,13 +53,13 @@ def translate_text(text, model, tokenizer, device, language_prefix):
     return translated_text
 
 
-model_name = "Sunbird/sunbird-en-mul"
+model_name = "Sunbird/e2m_best_19_4_23"
 tokenizer, model, device = load_model(model_name)
 tacotron2, hifi_gan = load_tts_models()
 
 st.title("Transcript Translation and Synthesis Demo")
 
-language_prefix = st.selectbox("Select target language:", ["lug"])
+language_prefix = st.selectbox("Select target language:", ["lug_hq"])
 
 uploaded_file = st.file_uploader("Upload transcript as text file", type=["txt"])
 
